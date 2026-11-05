@@ -1,0 +1,15 @@
+﻿dependencies:
+  espressif/esp_video: ^2.5.0
+  # ESP32-P4 H.264 ?섎뱶?⑥뼱 ?몄퐫??而댄룷?뚰듃
+  espressif/esp_h264: ^1.4.1
+  # MIPI-CSI 移대찓???쇱꽌 ?쒕씪?대쾭
+  espressif/esp_cam_sensor: ^2.6.0
+
+  # C6 ?쒖뼱 諛??뚮옒?깆쓣 ?꾪븳 Hosted 而댄룷?뚰듃 異붽?
+  espressif/esp_hosted: '*'
+  
+  # ?뙚 Remote Wi-Fi 而댄룷?뚰듃 怨듭떇 ?섏〈??異붽?
+  espressif/esp_wifi_remote: '*'
+  
+  espressif/mdns: ^1.4.0
+

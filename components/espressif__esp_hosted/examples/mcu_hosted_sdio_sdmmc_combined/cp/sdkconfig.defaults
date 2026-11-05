@@ -1,0 +1,42 @@
+# ── Role: COPROCESSOR ────────────────────────────────────────────────
+# ESP-Hosted coprocessor firmware (works with both MCU and Linux hosts
+# via the unified MCU RPC v1 wire).
+CONFIG_ESP_HOSTED=y
+CONFIG_ESP_HOSTED_CP=y
+CONFIG_ESP_HOSTED_CP_FOR_MCU=y
+CONFIG_ESP_HOSTED_CP_RPC_V2=y
+
+#Disable enterprise support by default
+CONFIG_ESP_WIFI_ENTERPRISE_SUPPORT=n
+
+# BT Configuration
+CONFIG_BT_ENABLED=n
+#CONFIG_BT_CONTROLLER_ONLY=y
+
+# OTA
+CONFIG_ESPTOOLPY_FLASHSIZE_4MB=y
+CONFIG_PARTITION_TABLE_CUSTOM=y
+CONFIG_PARTITION_TABLE_CUSTOM_FILENAME="partitions_eh_cp_ota_4m.csv"
+
+# OS
+CONFIG_FREERTOS_HZ=1000
+CONFIG_ESP_WIFI_NVS_ENABLED=y
+
+CONFIG_ESP_HOSTED_CP_FEAT_WIFI=y
+
+# ==============================================================================
+# Guition ESP32-P4 + C6 콘솔 및 SDIO 핀 설정
+# ==============================================================================
+# 콘솔 출력을 UART0로 지정하여 USB-JTAG 블로킹 차단
+CONFIG_ESP_CONSOLE_UART_DEFAULT=y
+CONFIG_ESP_CONSOLE_UART=y
+CONFIG_ESP_CONSOLE_UART_NUM=0
+CONFIG_ESP_CONSOLE_UART_BAUDRATE=115200
+
+# C6 SDIO 핀 매핑
+CONFIG_EH_TRANSPORT_CP_SDIO_PIN_CMD=18
+CONFIG_EH_TRANSPORT_CP_SDIO_PIN_CLK=19
+CONFIG_EH_TRANSPORT_CP_SDIO_PIN_D0=20
+CONFIG_EH_TRANSPORT_CP_SDIO_PIN_D1=21
+CONFIG_EH_TRANSPORT_CP_SDIO_PIN_D2=22
+CONFIG_EH_TRANSPORT_CP_SDIO_PIN_D3=23

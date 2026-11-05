@@ -1,0 +1,58 @@
+# 1. 컴파일된 바이너리 및 실행 파일 제외 (필수 바이너리는 예외 처리)
+*.bin
+!main/network_adapter.bin
+*.elf
+*.hex
+*.o
+*.a
+*.d
+*.map
+
+# 2. 모든 백업, 복사본, 이전 설정 파일 제외
+*bak*
+*BAK*
+*backup*
+*Backup*
+*before*
+*복사본*
+*copy*
+*Copy*
+*.old
+*.orig
+*~
+
+# 3. 로그 폴더 및 임시 진단 파일 제외
+logs/
+*.log
+*.txt.pre_*
+*_diagnostics.txt
+p4_rtsp_diagnostics.txt
+
+# 4. 압축 파일 제외
+*.zip
+*.tar
+*.gz
+*.7z
+
+# 5. 백업 및 임시 폴더 제외
+backup_*/
+*backup*/
+source_backup/
+component_backups/
+
+# 6. sdkconfig 변형 백업 파일 제외 (sdkconfig, sdkconfig.defaults만 허용)
+sdkconfig.*
+!sdkconfig.defaults
+
+# 7. 빌드 산출물 및 자동 생성 컴포넌트 제외
+build/
+managed_components/
+
+# 8. 에디터 설정 제외
+.vscode/
+.svn/
+.idea/
+
+# 임시/콜백 테스트 메인 C 소스 제외
+main/main_*callback.c
+main/main_nocallback.c

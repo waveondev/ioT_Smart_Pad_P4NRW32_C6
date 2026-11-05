@@ -1,0 +1,33 @@
+menu "Smart Pad Camera Configuration"
+
+    config CAM_FRAME_WIDTH
+        int "Camera Frame Width"
+        default 1920
+        help
+            Width of the camera frame in pixels.
+
+    config CAM_FRAME_HEIGHT
+        int "Camera Frame Height"
+        default 1080
+        help
+            Height of the camera frame in pixels.
+
+    config RTSP_SERVER_PORT
+        int "RTSP Server Port"
+        default 8554
+        help
+            Port for the RTSP streaming server.
+
+    config CAM_SCCB_SCL_IO
+        int "SCCB SCL GPIO Pin"
+        default 7
+        help
+            GPIO pin number for I2C SCL.
+
+    config CAM_SCCB_SDA_IO
+        int "SCCB SDA GPIO Pin"
+        default 8
+        help
+            GPIO pin number for I2C SDA.
+
+endmenu
